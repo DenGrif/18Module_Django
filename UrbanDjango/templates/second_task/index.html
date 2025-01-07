@@ -7,11 +7,12 @@
 </head>
 <body>
     <h1>Добро пожаловать на страничку Task2</h1>
-    <p>
-        <a href="{% url 'class_view' %}">Переходим в Class View</a>
-    </p>
-    <p>
-        <a href="{% url 'function_view' %}">Переходим в Function View</a>
-    </p>
+    <nav>
+        <ul>
+            <li><a href="/">Главная страница</a></li>
+            <li><a href="/task2/class-view/">Классовое представление</a></li>
+            <li><a href="/task2/function-view/">Функциональное представление</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
