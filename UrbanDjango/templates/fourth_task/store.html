@@ -1,0 +1,19 @@
+<!-- Страница магазина -->
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}Магазин{% endblock %}
+
+{% block content %}
+    <h1>Магазин игр</h1>
+    <ul>
+        {% for item in games %}
+            <li>{{ item }}
+                <button>Купить</button>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block footer_buttons %}
+    <button onclick="location.href='/'"><h4>Вернуться на главную</h4></button>
+{% endblock %}

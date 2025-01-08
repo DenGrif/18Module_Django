@@ -1,0 +1,21 @@
+<!-- Страница корзины -->
+{% extends 'fourth_task/menu.html' %}
+
+{% block pagename %}Корзина{% endblock %}
+
+{% block content %}
+    {% if is_empty %}
+        <p><h3>Извините, Ваша корзина пуста.</h3></p>
+    {% else %}
+        <!-- Отображать товары в корзине -->
+        <ul>
+            {% for item in cart_items %}
+                <li>{{ item }} <button>Удалить</button></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
+
+{% block footer_buttons %}
+    <button onclick="location.href='/'"><h4>Вернуться на главную</h4></button>
+{% endblock %}

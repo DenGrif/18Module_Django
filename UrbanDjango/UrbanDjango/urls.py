@@ -19,12 +19,23 @@ Including another URLconf
 # UrbanDjango/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from task3.views import home, store, cart
+
+from task4.views import home, store, cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'), # Главная страница для task3
+    path('', home, name='home'),
     path('store/', store, name='store'), # Магазин
     path('cart/', cart, name='cart'), # Корзина
-    path('task2/', include('task2.urls')),
+    path('task2/', include('task2.urls')), # Чтоб работал task2
 ]
+
+# from task3.views import home, store, cart
+#
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', home, name='home'), # Главная страница для task3
+#     path('store/', store, name='store'), # Магазин
+#     path('cart/', cart, name='cart'), # Корзина
+#     path('task2/', include('task2.urls')),
+# ]
